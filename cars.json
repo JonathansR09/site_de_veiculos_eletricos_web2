@@ -1,0 +1,101 @@
+[
+  {
+    "name": "renault-kwid-e-tech",
+    "image": "img/renault-kwid-e-tech-avaliacao-externas-2.webp",
+    "price": "R$ 99.990",
+    "battery": "26,7 kWh",
+    "horsepower": "65 cv (48 kW)",
+    "torque": "11,5 kgfm",
+    "autonomy": "185 km",
+    "lowcharge": "2 horas e 54 minutos",
+    "highcharge": "40 minutos"
+  },
+  {
+    "name": "byd-dolphin-mini",
+    "image": "img/byd-dolphin-mini-br.webp",
+    "price": "R$ 115.800",
+    "battery": "38,8 kWh",
+    "horsepower": "75 cv (55 kW)",
+    "torque": "13,8 kgfm",
+    "autonomy": "280 km",
+    "lowcharge": "Não informado",
+    "highcharge": "30 minutos"
+  },
+  {
+    "name": "caoa-chery-icar",
+    "image": "img/caoa-chery-icar-2023-1.webp",
+    "price": "R$ 119.990",
+    "battery": "30,8 kWh",
+    "horsepower": "61 cv (45 kW)",
+    "torque": "15,3 kgfm",
+    "autonomy": "197 km",
+    "lowcharge": "5 horas",
+    "highcharge": "36 minutos"
+  },
+  {
+    "name": "jac-e-js1",
+    "image": "img/jac-e-js1-avaliacao-120.000-km.webp",
+    "price": "R$ 126.900",
+    "battery": "30,2 kWh",
+    "horsepower": "62 cv (45 kW)",
+    "torque": "15,3 kgfm",
+    "autonomy": "161 km",
+    "lowcharge": "8 horas",
+    "highcharge": "1 hora e 15 minutos"
+  },
+  {
+    "name": "byd-dolphin",
+    "image": "img/byd-dolphin-vs-gwm-ora-03-skin.webp",
+    "price": "R$ 149.800",
+    "battery": "44,9 kWh",
+    "horsepower": "94 cv (70 kW)",
+    "torque": "18,3 kgfm",
+    "autonomy": "291 km",
+    "lowcharge": "7 horas",
+    "highcharge": "25 minutos"
+  },
+  {
+    "name": "gwm-ora",
+    "image": "img/gwm-ora-03-skin-teste-br.webp",
+    "price": "R$ 150.000",
+    "battery": "48 kWh",
+    "horsepower": "171 cv (126 kW)",
+    "torque": "25,5 kgfm",
+    "autonomy": "232 km",
+    "lowcharge": "3 horas",
+    "highcharge": "30 minutos"
+  },
+  {
+    "name": "hyundai-kona",
+    "image": "img/hyundai-kona-ev-br.webp",
+    "price": "R$ 189.990",
+    "battery": "39,2 kWh",
+    "horsepower": "136 cv (100 kW)",
+    "torque": "40,3 kgfm",
+    "autonomy": "252 km",
+    "lowcharge": "6 horas e 10 minutos",
+    "highcharge": "47 minutos"
+  },
+  {
+    "name": "seres-3",
+    "image": "img/seres-3-avaliacao-br-7.webp",
+    "price": "R$ 199.990",
+    "battery": "39,2 kWh",
+    "horsepower": "163 cv (120 kW)",
+    "torque": "30,6 kgfm",
+    "autonomy": "206 km",
+    "lowcharge": "8 horas",
+    "highcharge": "1 hora e 15 minutos"
+  },
+  {
+    "name": "fiat-500e",
+    "image": "img/fiat-500e-br.webp",
+    "price": "R$ 214.990",
+    "battery": "42 kWh",
+    "horsepower": "118 cv (87 kW)",
+    "torque": "22,4 kgfm",
+    "autonomy": "227 km",
+    "lowcharge": "6 horas",
+    "highcharge": "35 minutos"
+  }
+  ]

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparação de Veículos Elétricos - Comparar Veículos</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Comparação de Veículos Elétricos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Início</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="compare.html">Comparar Veículos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">Sobre</a>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Galeria de Carros</a>
+          </li>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="container mt-5">
+    <h1>Comparar Veículos</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Selecione o primeiro veículo:</h3>
+        <select id="car1" class="form-control" onchange="loadCarData(1)"></select>
+      </div>
+      <div class="col-md-6">
+        <h3>Selecione o segundo veículo:</h3>
+        <select id="car2" class="form-control" onchange="loadCarData(2)"></select>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-6" id="car1Details"></div>
+      <div class="col-md-6" id="car2Details"></div>
+    </div>
+</div>
+
+  <!-- Fim do formulário -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('cars.json')
+        .then(response => response.json())
+        .then(cars => {
+          const car1Select = document.getElementById('car1');
+          const car2Select = document.getElementById('car2');
+
+          cars.forEach(car => {
+            const option = new Option(car.name, JSON.stringify(car));
+            car1Select.add(option.cloneNode(true));
+            car2Select.add(option.cloneNode(true));
+          });
+        });
+
+      window.loadCarData = (carNum) => {
+        const selectedCar = JSON.parse(document.getElementById('car' + carNum).value);
+        const detailsDiv = document.getElementById('car' + carNum + 'Details');
+        detailsDiv.innerHTML = `
+          <h3>${selectedCar.name}</h3>
+          <p><img src="${selectedCar.image}" class="img-fluid" alt="${selectedCar.name}"></p>
+          <p>Preço: ${selectedCar.price}</p>
+          <p>Bateria: ${selectedCar.battery}</p>
+          <p>Potência: ${selectedCar.horsepower}</p>
+          <p>Torque: ${selectedCar.torque}</p>
+          <p>Autonomia (Inmetro PBEV): ${selectedCar.autonomy}</p>
+          <p>Recarga a 6,6 kWh (20% - 100%): ${selectedCar.lowcharge}</p>
+          <p>Recarga a 40 kWh (30% - 80%): ${selectedCar.highcharge}</p>
+        `;
+      };
+    });
+</script>
+</body>
+</html>
